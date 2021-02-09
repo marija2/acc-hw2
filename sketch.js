@@ -5,7 +5,9 @@ function setup () {
   createCanvas ( 1000, 1000 );
 
   var cButton = select ( '#clear_button' );
-  cButton.mousePressed ( clearParticles() );
+
+  // cButton.mousePressed ( clearParticles() );
+  cButton.mousePressed ( clearParticles );
 }
 
 function draw () {
@@ -62,6 +64,7 @@ class Particle {
 
     noStroke ();
     fill ( this.col );
+    // ellipse (x, y, this.diameter, this.diameter );
     ellipse ( this.x, this.y, this.diameter, this.diameter );
   }
 }
